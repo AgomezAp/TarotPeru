@@ -121,7 +121,7 @@ export class DescriptionComponent {
     this.http
       .post<{ id: string }>('https://api.cartastarotperu.com/create-order', {})
       .subscribe((response) => {
-        const paymentUrl = `https://www.mercadopago.com.pe/checkout/v1/redirect?preference-id=${response.id}`;
+        const paymentUrl = `https://www.mercadopago.com.pe/checkout/v1/redirect?pref_id=${response.id}`;
         window.location.href = paymentUrl;
       });
   }
