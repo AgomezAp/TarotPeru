@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TarotAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script>
+    document.addEventListener('keydown', function (event) {
+      if (
+        event.key === 'F12' ||
+        (event.ctrlKey && event.shiftKey && event.key === 'I') || 
+        (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+        (event.ctrlKey && event.key === 'U')
+      ) {
+        event.preventDefault();
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener('contextmenu', (event) => event.preventDefault());
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
