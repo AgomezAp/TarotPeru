@@ -23,8 +23,8 @@ export const createOrder = async (req, res) => {
           },
         ],
         back_urls: {
-         success: 'http://localhost:4200/descripcion-cartas?status=success',
-         failure: 'http://localhost:4200/welcome?status=failure' 
+         success: 'https://cartastarotperu.com/descripcion-cartas?status=success',
+         failure: 'https://cartastarotperu.com/welcome?status=failure' 
           
         },
         notification_url:
