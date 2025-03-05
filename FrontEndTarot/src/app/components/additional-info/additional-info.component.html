@@ -13,14 +13,20 @@
             <div class="phone-select">
               <label for="countryCode">País:</label>
               <select id="countryCode" [(ngModel)]="countryCode" required>
-                <option value="+51">+51 (Perú)</option>
-                <!-- Agrega más opciones según sea necesario -->
+                <option value="+57">+57 (Colombia)</option>
               </select>
             </div>
             <div class="phone-input">
               <label for="phoneInput">Número de teléfono:</label>
               <input id="phoneInput" type="text" [(ngModel)]="phone" required />
             </div>
+          </div>
+          <div class="input-group terms-group">
+            <input type="checkbox" id="termsCheckbox" [(ngModel)]="termsAccepted" />
+            <label for="termsCheckbox">
+              Acepto los 
+              <a href="/terminos-y-condiciones" target="_blank" style="text-decoration: underline;">términos y condiciones</a>
+            </label>
           </div>
           <div id="errorMessage" class="none">Por favor, selecciona un código de país.</div>
           <div id="numErrorMessage" class="none">Por favor, ingresa un número válido.</div>

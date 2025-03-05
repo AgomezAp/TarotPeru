@@ -10,6 +10,9 @@ import { CardsComponent } from './components/cards/cards.component';
 import {
   DescriptionComponent,
 } from './components/description/description.component';
+import {
+  TerminosCondicionesComponent,
+} from './components/terminos-condiciones/terminos-condiciones.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ParticlesComponent } from './shared/particles/particles.component';
 
@@ -36,6 +39,9 @@ export const routes: Routes = [
     },
     {
       path:'agradecimiento',component:AgradecimientoComponent
+    },
+    {
+      path:'terminos-y-condiciones',component:TerminosCondicionesComponent
     }
 
 

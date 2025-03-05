@@ -8,21 +8,24 @@
           <h3>{{ card.name }}</h3>
         </div>
       </div>
+      
       <div class="description-content">
         <div class="result-page">
-        <h3>Descripción General</h3>
-        <p [ngClass]="{ blurred: !isPaid, 'no-select': !isPaid  }">{{ descriptionsText }}</p> <!-- Mostrar la descripción concatenada una vez -->
-      </div>
-      </div>
-      <div *ngIf="!isPaid" class="result-container">
-        <div class="result-content">
-          <button class="call-to-action" id="call-to-action" (click)="makePayment()">Hacer Pago</button>
+          <h3>Descripción General</h3>
+          <div class="scrollable-description" [ngClass]="{ blurred: !isPaid, 'no-select': !isPaid  }">
+            <p>{{ descriptionsText }}</p>
+          </div>
         </div>
       </div>
-      <div *ngIf="isPaid" class="result-container">
-        <div class="result-content">
-          <button class="call-to-action" id="call-to-action" (click)="showPopup()">Hablar con el maestro</button>
+
+      <div class="button-container">
+        <div *ngIf="!isPaid" class="result-container">
+          <button class="call-to-action" (click)="makePayment()">Hacer Pago</button>
         </div>
+        <div *ngIf="isPaid" class="result-container">
+          <button class="call-to-action" (click)="showPopup()">Hablar con el maestro</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

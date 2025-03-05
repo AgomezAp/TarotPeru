@@ -1,25 +1,27 @@
-
 .background {
-  background: url("/IMAGEN-ORIGEN-scaled-1.webp") no-repeat center center ;
+  background: url("/IMAGEN-ORIGEN-scaled-1.webp") no-repeat center center;
   background-size: cover;
   background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100vh;
   margin-top: -10px;
   margin-left: -10px;
   margin-right: -10px;
   margin-bottom: -10px;
-  overflow: hidden;
   z-index: 1;
+  background-attachment: fixed;
 }
-.particulas{
+
+.particulas {
   position: absolute;
   z-index: 1;
   overflow: hidden;
 }
+
 .no-select {
   user-select: none;
   -webkit-user-select: none;
@@ -31,6 +33,7 @@
 .no-select {
   pointer-events: none;
 }
+
 /* Contenedor principal */
 .cards-container {
   display: flex;
@@ -41,12 +44,13 @@
   flex-direction: column;
   background: #f8f5f5c7;
   z-index: 1;
-  
 }
+
 .swal2-popup {
   width: 90% !important;
   max-width: 400px !important;
 }
+
 .card-description {
   display: flex;
   flex-direction: column;
@@ -54,6 +58,7 @@
   margin: 30px;
   text-align: center;
 }
+
 .no-select {
   user-select: none;
   -webkit-user-select: none;
@@ -65,13 +70,16 @@
 .no-select {
   pointer-events: none;
 }
+
 .cards {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Espaciado entre cartas */
+  gap: 20px;
+  /* Espaciado entre cartas */
   margin-bottom: 20px;
   transform: scaleX(-1)
 }
+
 .blurred {
   filter: blur(5px);
   pointer-events: none;
@@ -90,6 +98,7 @@
   display: none;
   z-index: -1;
 }
+
 .cards img {
   width: 120px;
   height: 200px;
@@ -98,6 +107,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .card-item h3 {
   margin-top: 10px;
   font-size: 16px;
@@ -106,8 +116,10 @@
 }
 
 .cards img:hover {
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.6); /* Glow al pasar el mouse */
-  transform: translateY(-5px) scale(1.05); /* Animación de selección */
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.6);
+  /* Glow al pasar el mouse */
+  transform: translateY(-5px) scale(1.05);
+  /* Animación de selección */
 }
 
 .description-content {
@@ -123,6 +135,7 @@
   font-size: 16px;
   line-height: 1.5;
 }
+
 button {
   background: linear-gradient(45deg, #ffdd44, #bb8800);
   color: #fff;
@@ -140,64 +153,67 @@ button {
 button:hover {
   transform: scale(1.15);
   box-shadow:
-      0 4px 8px rgba(0, 0, 0, 0.4),
-      0 0 25px rgba(203, 161, 53, 1);
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(203, 161, 53, 1);
 }
 
 button:active {
   transform: scale(0.95);
   box-shadow:
-      0 2px 4px rgba(0, 0, 0, 0.5),
-      0 0 10px rgba(255, 255, 255, 0.6);
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.6);
   background: linear-gradient(45deg, #b68e4c, #8f6f2d);
 }
+
 .loading-overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.5);
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .loading-content {
-font-size: 15px;
-text-align: center;
-color: white;
+  font-size: 15px;
+  text-align: center;
+  color: white;
 }
 
 .loading-content img {
-width: 227px;
-height: 180px;
+  width: 227px;
+  height: 180px;
 }
+
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .card-description {
     width: 90%;
     min-height: auto;
+    overflow-y: scroll;
   }
-  
+
   .card-description img {
     height: 200px;
   }
-  
-.card-item img {
-  width: 100px;
-  height: 160px;
-}
 
-.call-to-action {
-  width: 100%;
-  padding: 10px;
-}
+  .card-item img {
+    width: 100px;
+    height: 160px;
+  }
 
-button {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2rem;
-}
+  .call-to-action {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
 }
