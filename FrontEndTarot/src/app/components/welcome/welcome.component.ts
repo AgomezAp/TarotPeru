@@ -32,6 +32,7 @@ export class WelcomeComponent {
    */
   startTarot(theme: string): void {
     // Filtra las cartas que tienen descripciones para el tema seleccionado
+    localStorage.setItem('tema', theme);
     const selectedCardData = this.cardData
       .filter((card: any) => card.descriptions[theme]?.length > 0)
       .map((card: any) => ({
